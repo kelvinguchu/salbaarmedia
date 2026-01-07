@@ -82,7 +82,10 @@ export function Header() {
               className="p-2 text-zinc-700 dark:text-zinc-400 cursor-pointer hover:text-black dark:hover:text-white transition-colors"
               aria-label="Toggle theme"
             >
-              {theme === 'dark' ? (
+              {theme === 'dark' ||
+              (theme === 'system' &&
+                typeof window !== 'undefined' &&
+                window.matchMedia('(prefers-color-scheme: dark)').matches) ? (
                 <HiOutlineSun className="w-6 h-6" />
               ) : (
                 <HiOutlineMoon className="w-6 h-6" />

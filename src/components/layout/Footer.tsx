@@ -55,7 +55,7 @@ const quickLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-muted text-muted-foreground overflow-hidden relative border-t border-border">
+    <footer className="bg-muted dark:bg-black text-muted-foreground overflow-hidden relative border-t border-border">
       {/* Decorative gradient */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-salbaar-600/10 rounded-full blur-[120px]" />
 
