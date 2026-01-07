@@ -17,7 +17,7 @@ const values = [
 
 export function PurposeSection() {
   return (
-    <section className="py-12 md:py-20 bg-zinc-950 overflow-hidden relative">
+    <section className="py-12 md:py-20 bg-background overflow-hidden relative">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(237,32,36,0.06),transparent_40%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(237,32,36,0.04),transparent_40%)]" />
@@ -32,7 +32,7 @@ export function PurposeSection() {
             className="inline-flex items-center gap-3 mb-6"
           >
             <span className="h-px w-8 md:w-12 bg-salbaar-500" />
-            <span className="text-salbaar-400 font-semibold uppercase tracking-widest text-xs md:text-sm">
+            <span className="text-salbaar-500 font-semibold uppercase tracking-widest text-xs md:text-sm">
               What Drives Us
             </span>
             <span className="h-px w-8 md:w-12 bg-salbaar-500" />
@@ -43,7 +43,7 @@ export function PurposeSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground"
           >
             Our Purpose
           </motion.h2>
@@ -59,7 +59,7 @@ export function PurposeSection() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-3 group"
           >
-            <div className="h-full bg-zinc-900 border border-zinc-800 rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 hover:border-salbaar-600/40 transition-colors duration-300 relative overflow-hidden">
+            <div className="h-full bg-card border border-border rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 hover:border-salbaar-600/40 transition-colors duration-300 relative overflow-hidden">
               {/* Accent line */}
               <div className="absolute top-0 left-0 w-1 h-full bg-linear-to-b from-salbaar-500 via-salbaar-600 to-transparent rounded-l-full" />
 
@@ -68,32 +68,32 @@ export function PurposeSection() {
                   <HiOutlineStar className="w-6 h-6 md:w-7 md:h-7 text-salbaar-500" />
                 </div>
                 <div>
-                  <p className="text-salbaar-400 text-xs md:text-sm font-medium uppercase tracking-wider mb-1">
+                  <p className="text-salbaar-500 text-xs md:text-sm font-medium uppercase tracking-wider mb-1">
                     Our Mission
                   </p>
-                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white">
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground">
                     Create Impact
                   </h3>
                 </div>
               </div>
 
               <div className="space-y-4 pl-0 md:pl-20">
-                <p className="text-base md:text-lg text-zinc-300 leading-relaxed">
+                <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-400 leading-relaxed">
                   To produce{' '}
-                  <span className="text-white font-semibold">
+                  <span className="text-foreground font-semibold">
                     exceptional visual content
                   </span>{' '}
                   that elevates brands and inspires audiences across East Africa
                   and beyond.
                 </p>
-                <p className="text-sm md:text-base text-zinc-500 leading-relaxed">
+                <p className="text-sm md:text-base text-zinc-600 dark:text-zinc-500 leading-relaxed">
                   We bridge ideas and impact, transforming visions into
                   compelling narratives that resonate.
                 </p>
               </div>
 
               {/* Decorative */}
-              <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-6xl md:text-7xl font-bold text-zinc-800/50">
+              <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-6xl md:text-7xl font-bold text-zinc-100 dark:text-zinc-800/50">
                 01
               </div>
             </div>
@@ -107,7 +107,7 @@ export function PurposeSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="lg:col-span-2 group"
           >
-            <div className="h-full bg-linear-to-br from-salbaar-600 via-salbaar-700 to-salbaar-800 rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 relative overflow-hidden">
+            <div className="h-full bg-linear-to-br from-salbaar-600 via-salbaar-700 to-salbaar-800 rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 relative overflow-hidden text-white">
               {/* Pattern overlay */}
               <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_80%_20%,white,transparent_50%)]" />
 
@@ -154,7 +154,7 @@ export function PurposeSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <h3 className="text-lg md:text-xl font-semibold text-white text-center mb-6">
+          <h3 className="text-lg md:text-xl font-semibold text-foreground text-center mb-6">
             Our Core Values
           </h3>
 
@@ -162,15 +162,17 @@ export function PurposeSection() {
             {values.map((value) => (
               <div
                 key={value.label}
-                className="bg-zinc-900 border border-zinc-800 rounded-xl p-4 md:p-5 text-center hover:border-salbaar-600/40 hover:-translate-y-1 transition-all duration-200"
+                className="bg-card border border-border rounded-xl p-4 md:p-5 text-center hover:border-salbaar-600/40 hover:-translate-y-1 transition-all duration-200 shadow-sm dark:shadow-none"
               >
                 <div className="w-10 h-10 md:w-12 md:h-12 mx-auto rounded-lg bg-salbaar-600/10 flex items-center justify-center mb-3">
                   <value.icon className="w-5 h-5 md:w-6 md:h-6 text-salbaar-500" />
                 </div>
-                <h4 className="text-sm md:text-base font-bold text-white mb-1">
+                <h4 className="text-sm md:text-base font-bold text-foreground mb-1">
                   {value.label}
                 </h4>
-                <p className="text-xs text-zinc-500">{value.desc}</p>
+                <p className="text-xs text-zinc-600 dark:text-zinc-400">
+                  {value.desc}
+                </p>
               </div>
             ))}
           </div>

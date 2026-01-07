@@ -73,7 +73,7 @@ export const Route = createFileRoute('/')({
 
 function Index() {
   return (
-    <div className="bg-zinc-950 min-h-screen">
+    <div className="bg-background min-h-screen">
       <Header />
       <HeroSection />
       <StorySection />

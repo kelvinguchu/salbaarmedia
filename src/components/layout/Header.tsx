@@ -1,4 +1,11 @@
 import { Link } from '@tanstack/react-router'
+import { useEffect, useState } from 'react'
+import {
+  HiOutlineMenuAlt3,
+  HiOutlineMoon,
+  HiOutlineSun,
+  HiOutlineX,
+} from 'react-icons/hi'
 import { Button } from '@/components/ui/button'
 import {
   Sheet,
@@ -7,12 +14,16 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet'
-import { useState, useEffect } from 'react'
-import { HiOutlineMenuAlt3, HiOutlineX } from 'react-icons/hi'
+import { useTheme } from '@/components/theme-provider'
 
 export function Header() {
+  const { theme, setTheme } = useTheme()
   const [sheetOpen, setSheetOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark')
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,7 +45,7 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-zinc-950/90 backdrop-blur-xl border-b border-salbaar-600/20 shadow-lg shadow-salbaar-950/10'
+          ? 'bg-background/80 backdrop-blur-xl border-b border-border shadow-lg shadow-black/5 dark:shadow-salbaar-950/10'
           : 'bg-transparent'
       }`}
     >
@@ -45,7 +56,7 @@ export function Header() {
             <img
               src="/logo.png"
               alt="Salbaar Media"
-              className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 dark:brightness-0 dark:invert"
             />
           </Link>
 
@@ -55,7 +66,7 @@ export function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="relative px-4 py-2 text-sm font-medium text-zinc-400 hover:text-white transition-colors duration-300 group"
+                className="relative px-4 py-2 text-sm font-medium text-zinc-700 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors duration-300 group"
               >
                 {link.label}
                 <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-salbaar-500 group-hover:w-3/4 transition-all duration-300" />
@@ -65,6 +76,19 @@ export function Header() {
 
           {/* CTA Button & Mobile Menu */}
           <div className="flex items-center gap-3">
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 text-zinc-700 dark:text-zinc-400 cursor-pointer hover:text-black dark:hover:text-white transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === 'dark' ? (
+                <HiOutlineSun className="w-6 h-6" />
+              ) : (
+                <HiOutlineMoon className="w-6 h-6" />
+              )}
+            </button>
+
             <Button
               className="hidden sm:inline-flex bg-salbaar-600 hover:bg-salbaar-500 text-white font-medium shadow-lg shadow-salbaar-600/25 hover:shadow-salbaar-500/40 transition-all duration-300"
               asChild
@@ -75,7 +99,7 @@ export function Header() {
             {/* Mobile Menu Sheet */}
             <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
               <SheetTrigger asChild>
-                <button className="md:hidden text-zinc-400 hover:text-white p-2 transition-colors">
+                <button className="md:hidden text-zinc-700 dark:text-zinc-400 hover:text-black dark:hover:text-white p-2 transition-colors">
                   {sheetOpen ? (
                     <HiOutlineX className="h-6 w-6" />
                   ) : (
@@ -85,14 +109,14 @@ export function Header() {
               </SheetTrigger>
               <SheetContent
                 side="top"
-                className="min-h-[60vh] bg-zinc-950/98 backdrop-blur-xl border-b border-salbaar-600/20"
+                className="min-h-[60vh] bg-background/98 backdrop-blur-xl border-b border-border"
               >
-                <SheetHeader className="pb-6 border-b border-zinc-800">
+                <SheetHeader className="pb-6 border-b border-border">
                   <SheetTitle>
                     <img
                       src="/logo.png"
                       alt="Salbaar Media"
-                      className="h-10 w-auto object-contain"
+                      className="h-10 w-auto object-contain dark:brightness-0 dark:invert"
                     />
                   </SheetTitle>
                 </SheetHeader>
@@ -102,7 +126,7 @@ export function Header() {
                       key={link.href}
                       href={link.href}
                       onClick={() => setSheetOpen(false)}
-                      className="px-4 py-4 text-lg font-medium text-zinc-300 hover:text-white hover:bg-salbaar-600/10 rounded-xl transition-all duration-300 border border-transparent hover:border-salbaar-600/20"
+                      className="px-4 py-4 text-lg font-medium text-zinc-700 dark:text-zinc-400 hover:text-black dark:hover:text-white hover:bg-salbaar-600/10 rounded-xl transition-all duration-300 border border-transparent hover:border-salbaar-600/20"
                     >
                       {link.label}
                     </a>

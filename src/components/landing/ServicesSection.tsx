@@ -65,10 +65,10 @@ export function ServicesSection() {
   return (
     <section
       id="services"
-      className="py-12 md:py-20 bg-zinc-900 overflow-hidden relative"
+      className="py-12 md:py-20 bg-background overflow-hidden relative"
     >
       {/* Background */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent,rgba(24,24,27,0.8))]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent,rgba(24,24,27,0.8))] dark:bg-[linear-gradient(to_bottom,transparent,rgba(24,24,27,0.8))] opacity-0 dark:opacity-100" />
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Header */}
@@ -81,16 +81,16 @@ export function ServicesSection() {
           >
             <div className="inline-flex items-center gap-3 mb-6">
               <span className="h-px w-8 md:w-12 bg-salbaar-500" />
-              <span className="text-salbaar-400 font-semibold uppercase tracking-widest text-xs md:text-sm">
+              <span className="text-salbaar-500 font-semibold uppercase tracking-widest text-xs md:text-sm">
                 What We Do
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-4 md:mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-tight mb-4 md:mb-6">
               Our Services
             </h2>
 
-            <p className="text-base md:text-lg text-zinc-400 leading-relaxed">
+            <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-400 leading-relaxed">
               End-to-end media production tailored to your vision. Every project
               receives our full creative attention.
             </p>
@@ -108,9 +108,9 @@ export function ServicesSection() {
               transition={{ duration: 0.5, delay: index * 0.05 }}
               className="group"
             >
-              <div className="relative h-full p-4 sm:p-5 md:p-6 rounded-xl md:rounded-2xl bg-zinc-800/30 border border-zinc-700/50 hover:border-salbaar-500/50 hover:bg-zinc-800/60 transition-all duration-300">
+              <div className="relative h-full p-4 sm:p-5 md:p-6 rounded-xl md:rounded-2xl bg-card border border-border hover:border-salbaar-500/50 hover:bg-zinc-50 dark:hover:bg-zinc-800/60 transition-all duration-300 shadow-sm dark:shadow-none">
                 {/* Number */}
-                <span className="absolute top-3 right-3 md:top-4 md:right-4 text-xs font-mono text-zinc-600 group-hover:text-salbaar-600 transition-colors">
+                <span className="absolute top-3 right-3 md:top-4 md:right-4 text-xs font-mono text-zinc-400 dark:text-zinc-600 group-hover:text-salbaar-600 transition-colors">
                   {service.number}
                 </span>
 
@@ -120,10 +120,10 @@ export function ServicesSection() {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-sm sm:text-base md:text-lg font-bold text-white mb-1 md:mb-2">
+                <h3 className="text-sm sm:text-base md:text-lg font-bold text-foreground mb-1 md:mb-2">
                   {service.name}
                 </h3>
-                <p className="text-xs sm:text-sm text-zinc-500 leading-relaxed">
+                <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
                   {service.description}
                 </p>
               </div>

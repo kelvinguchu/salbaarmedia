@@ -55,7 +55,7 @@ const quickLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-zinc-950 text-zinc-300 overflow-hidden relative">
+    <footer className="bg-muted text-muted-foreground overflow-hidden relative border-t border-border">
       {/* Decorative gradient */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-salbaar-600/10 rounded-full blur-[120px]" />
 
@@ -68,13 +68,13 @@ export function Footer() {
               <img
                 src="/logo.png"
                 alt="Salbaar Media"
-                className="h-12 w-auto object-contain brightness-0 invert"
+                className="h-12 w-auto object-contain dark:brightness-0 dark:invert"
               />
             </Link>
-            <p className="text-salbaar-400 text-sm font-semibold tracking-wide mb-3">
+            <p className="text-salbaar-500 font-semibold tracking-wide mb-3">
               Amplifying Voices. Shaping Narratives.
             </p>
-            <p className="text-sm mb-8 max-w-md leading-relaxed text-zinc-400">
+            <p className="text-sm mb-8 max-w-md leading-relaxed text-muted-foreground">
               A creative media powerhouse delivering exceptional video
               production, broadcasting, and digital storytelling services.
             </p>
@@ -87,10 +87,10 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-xl bg-zinc-900 border border-zinc-800 hover:bg-salbaar-600 hover:border-salbaar-600 transition-all duration-300"
+                  className="p-3 rounded-xl bg-background border border-border hover:bg-salbaar-600 hover:border-salbaar-600 group transition-all duration-300"
                   aria-label={social.label}
                 >
-                  <social.icon className="w-5 h-5 text-zinc-400 hover:text-white transition-colors" />
+                  <social.icon className="w-5 h-5 text-muted-foreground group-hover:text-white transition-colors" />
                 </a>
               ))}
             </div>
@@ -98,7 +98,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div className="md:col-span-3">
-            <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">
+            <h4 className="text-foreground font-semibold mb-5 text-sm uppercase tracking-wider">
               Navigation
             </h4>
             <ul className="space-y-3">
@@ -106,7 +106,7 @@ export function Footer() {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-sm text-zinc-400 hover:text-salbaar-400 transition-colors inline-flex items-center gap-2 group"
+                    className="text-sm text-muted-foreground hover:text-salbaar-500 transition-colors inline-flex items-center gap-2 group"
                   >
                     <span className="w-0 group-hover:w-3 h-px bg-salbaar-500 transition-all duration-300" />
                     {link.name}
@@ -118,15 +118,15 @@ export function Footer() {
 
           {/* Contact */}
           <div className="md:col-span-4">
-            <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">
+            <h4 className="text-foreground font-semibold mb-5 text-sm uppercase tracking-wider">
               Get in Touch
             </h4>
             <div className="space-y-4">
               <a
                 href="mailto:hajiatosh@gmail.com"
-                className="flex items-center gap-4 text-sm text-zinc-400 hover:text-salbaar-400 transition-colors group"
+                className="flex items-center gap-4 text-sm text-muted-foreground hover:text-salbaar-500 transition-colors group"
               >
-                <div className="p-2.5 rounded-lg bg-zinc-900 border border-zinc-800 group-hover:bg-salbaar-600/20 group-hover:border-salbaar-600/30 transition-all">
+                <div className="p-2.5 rounded-lg bg-background border border-border group-hover:bg-salbaar-600/10 group-hover:border-salbaar-600/30 transition-all">
                   <HiOutlineMail className="w-4 h-4" />
                 </div>
                 hajiatosh@gmail.com
@@ -134,22 +134,22 @@ export function Footer() {
               <div className="flex flex-col gap-2">
                 <a
                   href="tel:+252616068554"
-                  className="flex items-center gap-4 text-sm text-zinc-400 hover:text-salbaar-400 transition-colors group"
+                  className="flex items-center gap-4 text-sm text-muted-foreground hover:text-salbaar-500 transition-colors group"
                 >
-                  <div className="p-2.5 rounded-lg bg-zinc-900 border border-zinc-800 group-hover:bg-salbaar-600/20 group-hover:border-salbaar-600/30 transition-all">
+                  <div className="p-2.5 rounded-lg bg-background border border-border group-hover:bg-salbaar-600/10 group-hover:border-salbaar-600/30 transition-all">
                     <HiOutlinePhone className="w-4 h-4" />
                   </div>
                   +252 61 6068554
                 </a>
                 <a
                   href="tel:+252619039111"
-                  className="flex items-center gap-4 text-sm text-zinc-400 hover:text-salbaar-400 transition-colors group ml-13"
+                  className="flex items-center gap-4 text-sm text-muted-foreground hover:text-salbaar-500 transition-colors group ml-13"
                 >
                   +252 61 9039111
                 </a>
               </div>
-              <div className="flex items-center gap-4 text-sm text-zinc-400">
-                <div className="p-2.5 rounded-lg bg-zinc-900 border border-zinc-800">
+              <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                <div className="p-2.5 rounded-lg bg-background border border-border">
                   <HiOutlineLocationMarker className="w-4 h-4" />
                 </div>
                 Mogadishu, Somalia
@@ -159,10 +159,10 @@ export function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="h-px bg-linear-to-r from-transparent via-zinc-800 to-transparent mb-8" />
+        <div className="h-px bg-linear-to-r from-transparent via-border to-transparent mb-8" />
 
         {/* Bottom bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-zinc-500">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <p>
             © {new Date().getFullYear()} Salbaar Media. All rights reserved.
           </p>

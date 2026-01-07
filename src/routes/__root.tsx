@@ -10,8 +10,14 @@ import { useEffect } from 'react'
 import Lenis from 'lenis'
 
 import appCss from '../styles.css?url'
+import { ThemeProvider } from '@/components/theme-provider'
+import { getThemeServerFn } from '@/lib/theme'
 
 export const Route = createRootRoute({
+  loader: async () => {
+    const theme = await getThemeServerFn()
+    return { theme }
+  },
   head: () => ({
     meta: [
       {
@@ -111,6 +117,8 @@ export const Route = createRootRoute({
 })
 
 function RootDocument() {
+  const { theme } = Route.useLoaderData()
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
@@ -153,26 +161,28 @@ function RootDocument() {
   }, [])
 
   return (
-    <html lang="en">
+    <html lang="en" className={theme}>
       <head>
         <HeadContent />
       </head>
       <body>
-        <div id="root">
-          <Outlet />
-        </div>
-        <TanStackDevtools
-          config={{
-            position: 'bottom-right',
-          }}
-          plugins={[
-            {
-              name: 'Tanstack Router',
-              render: <TanStackRouterDevtoolsPanel />,
-            },
-          ]}
-        />
-        <Scripts />
+        <ThemeProvider theme={theme}>
+          <div id="root">
+            <Outlet />
+          </div>
+          <TanStackDevtools
+            config={{
+              position: 'bottom-right',
+            }}
+            plugins={[
+              {
+                name: 'Tanstack Router',
+                render: <TanStackRouterDevtoolsPanel />,
+              },
+            ]}
+          />
+          <Scripts />
+        </ThemeProvider>
       </body>
     </html>
   )

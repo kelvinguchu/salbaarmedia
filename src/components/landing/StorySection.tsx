@@ -61,7 +61,7 @@ export function StorySection() {
   return (
     <section
       id="story"
-      className="py-8 md:py-16 bg-zinc-900 overflow-hidden relative"
+      className="py-8 md:py-16 bg-background dark:bg-muted/50 overflow-hidden relative"
     >
       {/* Background accent */}
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-salbaar-600/30 to-transparent" />
@@ -72,13 +72,13 @@ export function StorySection() {
         <div className="text-center mb-12 md:mb-16">
           <div className="inline-flex items-center gap-3 mb-6">
             <span className="h-px w-8 md:w-12 bg-salbaar-500" />
-            <span className="text-salbaar-400 font-semibold uppercase tracking-widest text-xs md:text-sm">
+            <span className="text-salbaar-500 font-semibold uppercase tracking-widest text-xs md:text-sm">
               Who We Are
             </span>
             <span className="h-px w-8 md:w-12 bg-salbaar-500" />
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-tight">
             The Creative Force
             <br />
             <span className="text-salbaar-500">Behind the Lens</span>
@@ -93,7 +93,7 @@ export function StorySection() {
               {/* Gradient border */}
               <div className="absolute -inset-px bg-linear-to-br from-salbaar-500 via-salbaar-600 to-salbaar-700 rounded-2xl md:rounded-3xl opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
 
-              <div className="relative h-full bg-zinc-900 rounded-2xl md:rounded-3xl overflow-hidden flex flex-col">
+              <div className="relative h-full bg-card rounded-2xl md:rounded-3xl overflow-hidden flex flex-col">
                 {/* Founder Image */}
                 <div className="relative h-64 sm:h-80 md:h-96 overflow-hidden">
                   <div className="absolute inset-0 group-hover:scale-105 transition-transform duration-700 ease-out">
@@ -102,7 +102,7 @@ export function StorySection() {
                       alt="Abdirizak Atosh - Founder"
                       className="w-full h-full object-cover object-top"
                     />
-                    <div className="absolute inset-0 bg-linear-to-t from-zinc-900 via-zinc-900/40 to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
                   </div>
 
                   {/* Founder Info Overlay */}
@@ -123,7 +123,7 @@ export function StorySection() {
                     <div className="text-4xl md:text-5xl text-salbaar-500 font-serif leading-none mb-3">
                       &ldquo;
                     </div>
-                    <p className="text-base md:text-lg text-zinc-300 leading-relaxed italic">
+                    <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-400 leading-relaxed italic">
                       Every story deserves to be heard. At Salbaar Media, we
                       don't just create content — we amplify voices that shape
                       our world.
@@ -131,8 +131,8 @@ export function StorySection() {
                   </div>
 
                   {/* Social Platforms */}
-                  <div className="pt-6 border-t border-zinc-800 mt-auto">
-                    <p className="text-zinc-500 text-sm mb-4">
+                  <div className="pt-6 border-t border-border mt-auto">
+                    <p className="text-zinc-600 dark:text-zinc-400 text-sm mb-4">
                       Connect across platforms
                     </p>
                     <div className="flex flex-wrap gap-2">
@@ -142,10 +142,10 @@ export function StorySection() {
                           href={platform.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`p-3 rounded-xl bg-zinc-800 border border-zinc-700 ${platform.hoverClass} hover:scale-110 active:scale-95 transition-all duration-200`}
+                          className={`p-3 rounded-xl bg-secondary hover:bg-salbaar-600 hover:text-white border border-border ${platform.hoverClass} hover:scale-110 active:scale-95 transition-all duration-200 group/icon`}
                           aria-label={platform.name}
                         >
-                          <platform.icon className="w-5 h-5 text-zinc-400 hover:text-white transition-colors" />
+                          <platform.icon className="w-5 h-5 text-zinc-600 dark:text-zinc-400 group-hover/icon:text-white transition-colors" />
                         </a>
                       ))}
                     </div>
@@ -158,15 +158,15 @@ export function StorySection() {
           {/* Right - Story Content */}
           <div className="space-y-6 h-full flex flex-col">
             {/* Story Text */}
-            <div className="bg-zinc-800/50 backdrop-blur rounded-2xl p-6 md:p-8 border border-zinc-700/50 hover:border-zinc-600 transition-colors duration-300">
-              <p className="text-lg md:text-xl text-zinc-300 leading-relaxed mb-4">
+            <div className="bg-card backdrop-blur rounded-2xl p-6 md:p-8 border border-border hover:border-salbaar-500/30 transition-colors duration-300">
+              <p className="text-lg md:text-xl text-zinc-800 dark:text-zinc-200 leading-relaxed mb-4">
                 Salbaar Media was born from a simple belief:{' '}
-                <span className="text-white font-semibold">
+                <span className="text-foreground font-semibold">
                   powerful storytelling changes everything
                 </span>
                 .
               </p>
-              <p className="text-base md:text-lg text-zinc-400 leading-relaxed">
+              <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-400 leading-relaxed">
                 Based in the heart of East Africa, we've quickly established
                 ourselves as a creative force in media production. From
                 compelling documentaries to dynamic live broadcasts, we bring
@@ -179,13 +179,15 @@ export function StorySection() {
               {stats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="bg-zinc-800/40 rounded-xl p-4 md:p-5 text-center border border-zinc-700/50 hover:border-salbaar-500/50 hover:-translate-y-1 transition-all duration-200"
+                  className="bg-card rounded-xl p-4 md:p-5 text-center border border-border hover:border-salbaar-500/50 hover:-translate-y-1 transition-all duration-200"
                 >
                   <stat.icon className="w-6 h-6 text-salbaar-500 mx-auto mb-2" />
-                  <p className="text-xl md:text-2xl font-bold text-white">
+                  <p className="text-xl md:text-2xl font-bold text-foreground">
                     {stat.value}
                   </p>
-                  <p className="text-xs text-zinc-500">{stat.label}</p>
+                  <p className="text-xs text-zinc-600 dark:text-zinc-400">
+                    {stat.label}
+                  </p>
                 </div>
               ))}
             </div>
