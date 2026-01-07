@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://salbaar.com/sitemap.xml
