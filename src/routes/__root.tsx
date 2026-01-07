@@ -130,12 +130,14 @@ function RootDocument() {
       touchMultiplier: 2,
     })
 
+    let rafId: number
+
     function raf(time: number) {
       lenis.raf(time)
-      requestAnimationFrame(raf)
+      rafId = requestAnimationFrame(raf)
     }
 
-    requestAnimationFrame(raf)
+    rafId = requestAnimationFrame(raf)
 
     // Handle anchor links for smooth scrolling
     const handleAnchorClick = (e: MouseEvent) => {
@@ -155,6 +157,7 @@ function RootDocument() {
     document.addEventListener('click', handleAnchorClick)
 
     return () => {
+      cancelAnimationFrame(rafId)
       lenis.destroy()
       document.removeEventListener('click', handleAnchorClick)
     }

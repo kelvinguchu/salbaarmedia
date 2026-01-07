@@ -16,11 +16,13 @@ export function HeroSection() {
         {/* Large rotating ring */}
         <motion.div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] md:w-[900px] md:h-[900px] border border-salbaar-600/20 rounded-full"
+          style={{ willChange: 'transform' }}
           animate={{ rotate: 360 }}
           transition={{ duration: 80, repeat: Infinity, ease: 'linear' }}
         />
         <motion.div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] md:w-[600px] md:h-[600px] border border-salbaar-500/10 rounded-full"
+          style={{ willChange: 'transform' }}
           animate={{ rotate: -360 }}
           transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
         />
@@ -28,16 +30,19 @@ export function HeroSection() {
         {/* Floating accent dots */}
         <motion.div
           className="absolute top-1/4 left-1/4 w-2 h-2 bg-salbaar-500 rounded-full"
+          style={{ willChange: 'transform' }}
           animate={{ y: [0, -20, 0], opacity: [0.5, 1, 0.5] }}
           transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
         />
         <motion.div
           className="absolute top-1/3 right-1/4 w-3 h-3 bg-salbaar-400/60 rounded-full"
+          style={{ willChange: 'transform' }}
           animate={{ y: [0, 15, 0], opacity: [0.3, 0.8, 0.3] }}
           transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
         />
         <motion.div
           className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-salbaar-600 rounded-full"
+          style={{ willChange: 'transform' }}
           animate={{ y: [0, -15, 0], opacity: [0.4, 1, 0.4] }}
           transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
         />
@@ -46,6 +51,7 @@ export function HeroSection() {
       {/* Animated glow orbs - Reduced intensity/hidden on mobile */}
       <motion.div
         className="absolute top-0 left-1/4 w-[300px] h-[300px] md:w-[500px] md:h-[500px] rounded-full bg-salbaar-600/10 md:bg-salbaar-600/15 blur-[100px] md:blur-[150px]"
+        style={{ willChange: 'transform, opacity' }}
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.3, 0.5, 0.3],
@@ -54,6 +60,7 @@ export function HeroSection() {
       />
       <motion.div
         className="absolute bottom-0 right-1/4 w-[300px] h-[300px] md:w-[600px] md:h-[600px] rounded-full bg-salbaar-500/5 md:bg-salbaar-500/10 blur-[100px] md:blur-[180px]"
+        style={{ willChange: 'transform, opacity' }}
         animate={{
           scale: [1.2, 1, 1.2],
           opacity: [0.2, 0.4, 0.2],
