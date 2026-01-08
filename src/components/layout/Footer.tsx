@@ -68,7 +68,7 @@ export function Footer() {
               <img
                 src="/logo.png"
                 alt="Salbaar Media"
-                className="h-12 w-auto object-contain dark:brightness-0 dark:invert"
+                className="h-12 w-auto object-contain"
               />
             </Link>
             <p className="text-salbaar-500 font-semibold tracking-wide mb-3">
