@@ -2,7 +2,6 @@ import * as motion from 'motion/react-client'
 import {
   HiOutlineDesktopComputer,
   HiOutlineFilm,
-  HiOutlineMicrophone,
   HiOutlineNewspaper,
   HiOutlinePhotograph,
   HiOutlinePresentationChartBar,
@@ -12,52 +11,47 @@ import {
 
 const services = [
   {
-    name: 'Film Production',
-    description: 'Script to screen storytelling',
-    icon: HiOutlineFilm,
+    name: 'News & Reporting',
+    description:
+      'Daily bulletins with Daqiiqadaha Wararka, in-depth articles & real-time updates',
+    icon: HiOutlineNewspaper,
     number: '01',
   },
   {
-    name: 'Live Broadcasting',
-    description: 'Real-time event streaming',
-    icon: HiOutlineDesktopComputer,
+    name: 'Film & Documentary',
+    description: 'Script-to-screen storytelling & business documentaries',
+    icon: HiOutlineFilm,
     number: '02',
   },
   {
-    name: 'Documentaries',
-    description: 'Stories that inspire',
-    icon: HiOutlineVideoCamera,
+    name: 'Digital Broadcasting',
+    description: 'Live coverage & real-time digital broadcasting',
+    icon: HiOutlineDesktopComputer,
     number: '03',
   },
   {
-    name: 'Brand Videos',
-    description: 'Content that converts',
+    name: 'Commercial Production',
+    description: 'Brand videos, audio/video ads & success stories',
     icon: HiOutlineSpeakerphone,
     number: '04',
   },
   {
-    name: 'Event Coverage',
-    description: 'Capture every moment',
+    name: 'Creative Assets',
+    description: 'Professional photography & data-driven infographics',
     icon: HiOutlinePhotograph,
     number: '05',
   },
   {
-    name: 'Podcast & Audio',
-    description: 'Professional sound production',
-    icon: HiOutlineMicrophone,
+    name: 'Media Consulting',
+    description: 'Media mapping, monitoring & strategic buying',
+    icon: HiOutlinePresentationChartBar,
     number: '06',
   },
   {
-    name: 'News Production',
-    description: 'Timely & accurate',
-    icon: HiOutlineNewspaper,
+    name: 'Success Story Articles',
+    description: 'Compelling narratives that highlight achievement',
+    icon: HiOutlineVideoCamera, // Using VideoCamera as generic media/story icon or could import HiOutlineDocumentText
     number: '07',
-  },
-  {
-    name: 'Media Consulting',
-    description: 'Strategic media guidance',
-    icon: HiOutlinePresentationChartBar,
-    number: '08',
   },
 ]
 
@@ -65,14 +59,14 @@ export function ServicesSection() {
   return (
     <section
       id="services"
-      className="py-12 md:py-20 bg-background overflow-hidden relative"
+      className="py-6 md:py-8 bg-background overflow-hidden relative"
     >
       {/* Background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent,rgba(24,24,27,0.8))] dark:bg-[linear-gradient(to_bottom,transparent,rgba(24,24,27,0.8))] opacity-0 dark:opacity-100" />
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Header */}
-        <div className="max-w-4xl mb-12 md:mb-16">
+        <div className="max-w-4xl mb-4 md:mb-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

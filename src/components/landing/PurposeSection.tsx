@@ -24,7 +24,7 @@ export function PurposeSection() {
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-12 md:mb-16">
+        <div className="mb-4 md:mb-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -35,7 +35,6 @@ export function PurposeSection() {
             <span className="text-salbaar-500 font-semibold uppercase tracking-widest text-xs md:text-sm">
               What Drives Us
             </span>
-            <span className="h-px w-8 md:w-12 bg-salbaar-500" />
           </motion.div>
 
           <motion.h2
@@ -72,23 +71,23 @@ export function PurposeSection() {
                     Our Mission
                   </p>
                   <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground">
-                    Create Impact
+                    Inform, Educate & Inspire
                   </h3>
                 </div>
               </div>
 
               <div className="space-y-4 pl-0 md:pl-20">
                 <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-400 leading-relaxed">
-                  To produce{' '}
+                  To set the standard for media excellence by blending{' '}
                   <span className="text-foreground font-semibold">
-                    exceptional visual content
+                    traditional journalistic principles
                   </span>{' '}
-                  that elevates brands and inspires audiences across East Africa
-                  and beyond.
+                  with innovative digital production.
                 </p>
                 <p className="text-sm md:text-base text-zinc-600 dark:text-zinc-500 leading-relaxed">
-                  We bridge ideas and impact, transforming visions into
-                  compelling narratives that resonate.
+                  We amplify voices and deliver compelling narratives through
+                  daily bulletins, in-depth reporting, and creative
+                  storytelling.
                 </p>
               </div>
 
@@ -121,21 +120,21 @@ export function PurposeSection() {
                       Our Vision
                     </p>
                     <h3 className="text-xl md:text-2xl font-bold text-white">
-                      Lead Innovation
+                      Deepen Engagement
                     </h3>
                   </div>
                 </div>
 
                 <p className="text-base md:text-lg text-white/90 leading-relaxed mb-4">
-                  To become the{' '}
+                  To be the tailored voice that{' '}
                   <span className="text-white font-semibold">
-                    premier media production house
+                    resonates with diverse audiences
                   </span>{' '}
-                  in the Horn of Africa.
+                  in real time.
                 </p>
                 <p className="text-sm md:text-base text-white/70 leading-relaxed">
-                  Setting new standards for creativity and redefining visual
-                  storytelling.
+                  Extending reach through live coverage, digital broadcasting,
+                  and professional media services.
                 </p>
 
                 {/* Decorative */}

@@ -4,45 +4,18 @@ import {
   HiOutlineMail,
   HiOutlinePhone,
 } from 'react-icons/hi'
-import {
-  RiFacebookLine,
-  RiInstagramLine,
-  RiLinkedinLine,
-  RiTiktokLine,
-  RiTwitterXLine,
-  RiYoutubeLine,
-} from 'react-icons/ri'
+import { RiFacebookLine, RiInstagramLine } from 'react-icons/ri'
 
 const socialLinks = [
   {
-    icon: RiYoutubeLine,
-    href: 'https://www.youtube.com/@abdirizakatosh8936',
-    label: 'YouTube',
-  },
-  {
     icon: RiFacebookLine,
-    href: 'https://web.facebook.com/AbdirizakHajiAtosh',
+    href: 'https://www.facebook.com/SalbaarMedialtd',
     label: 'Facebook',
   },
   {
     icon: RiInstagramLine,
-    href: 'https://www.instagram.com/abdirizak_atosh/',
+    href: 'https://www.instagram.com/salbaar_media/',
     label: 'Instagram',
-  },
-  {
-    icon: RiLinkedinLine,
-    href: 'https://www.linkedin.com/in/abdirizak-atosh-081ab1172',
-    label: 'LinkedIn',
-  },
-  {
-    icon: RiTwitterXLine,
-    href: 'https://x.com/abdirizakatosh',
-    label: 'X',
-  },
-  {
-    icon: RiTiktokLine,
-    href: 'https://www.tiktok.com/@abdirizakatosh',
-    label: 'TikTok',
   },
 ]
 
@@ -87,10 +60,10 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-xl bg-background border border-border hover:bg-salbaar-600 hover:border-salbaar-600 group transition-all duration-300"
+                  className="text-muted-foreground hover:text-salbaar-500 transition-colors"
                   aria-label={social.label}
                 >
-                  <social.icon className="w-5 h-5 text-muted-foreground group-hover:text-white transition-colors" />
+                  <social.icon className="w-6 h-6" />
                 </a>
               ))}
             </div>
@@ -124,34 +97,28 @@ export function Footer() {
             <div className="space-y-4">
               <a
                 href="mailto:hajiatosh@gmail.com"
-                className="flex items-center gap-4 text-sm text-muted-foreground hover:text-salbaar-500 transition-colors group"
+                className="flex items-center gap-3 text-sm text-muted-foreground hover:text-salbaar-500 transition-colors group"
               >
-                <div className="p-2.5 rounded-lg bg-background border border-border group-hover:bg-salbaar-600/10 group-hover:border-salbaar-600/30 transition-all">
-                  <HiOutlineMail className="w-4 h-4" />
-                </div>
+                <HiOutlineMail className="w-5 h-5" />
                 hajiatosh@gmail.com
               </a>
               <div className="flex flex-col gap-2">
                 <a
                   href="tel:+252616068554"
-                  className="flex items-center gap-4 text-sm text-muted-foreground hover:text-salbaar-500 transition-colors group"
+                  className="flex items-center gap-3 text-sm text-muted-foreground hover:text-salbaar-500 transition-colors group"
                 >
-                  <div className="p-2.5 rounded-lg bg-background border border-border group-hover:bg-salbaar-600/10 group-hover:border-salbaar-600/30 transition-all">
-                    <HiOutlinePhone className="w-4 h-4" />
-                  </div>
+                  <HiOutlinePhone className="w-5 h-5" />
                   +252 61 6068554
                 </a>
                 <a
                   href="tel:+252619039111"
-                  className="flex items-center gap-4 text-sm text-muted-foreground hover:text-salbaar-500 transition-colors group ml-13"
+                  className="flex items-center gap-3 text-sm text-muted-foreground hover:text-salbaar-500 transition-colors group ml-8"
                 >
                   +252 61 9039111
                 </a>
               </div>
-              <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                <div className="p-2.5 rounded-lg bg-background border border-border">
-                  <HiOutlineLocationMarker className="w-4 h-4" />
-                </div>
+              <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                <HiOutlineLocationMarker className="w-5 h-5" />
                 Mogadishu, Somalia
               </div>
             </div>
@@ -166,7 +133,17 @@ export function Footer() {
           <p>
             © {new Date().getFullYear()} Salbaar Media. All rights reserved.
           </p>
-          <p className="text-salbaar-500 font-medium">Amplifying Your Voice</p>
+          <p className="text-zinc-500 dark:text-zinc-400">
+            Designed and Developed by{' '}
+            <a
+              href="https://kulmi.digital"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-salbaar-500 hover:text-salbaar-600 dark:text-salbaar-400 dark:hover:text-salbaar-300 font-medium transition-colors"
+            >
+              Kulmi Digital
+            </a>
+          </p>
         </div>
       </div>
     </footer>

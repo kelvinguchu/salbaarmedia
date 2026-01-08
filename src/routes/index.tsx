@@ -17,12 +17,12 @@ export const Route = createFileRoute('/')({
       {
         name: 'description',
         content:
-          'Based in Mogadishu, Salbaar Media is a premier creative agency specializing in video production, broadcasting, and digital storytelling across East Africa.',
+          'Based in Mogadishu, Salbaar Media is a premier creative agency specializing in video production, broadcasting, and digital storytelling across the Horn of Africa.',
       },
       {
         name: 'keywords',
         content:
-          'media production, video production somalia, creative agency mogadishu, digital storytelling, broadcasting services, salbaar media, east africa media',
+          'media production, video production somalia, creative agency mogadishu, digital storytelling, broadcasting services, salbaar media, horn of africa media',
       },
     ],
     scripts: [
@@ -57,12 +57,8 @@ export const Route = createFileRoute('/')({
             },
           ],
           sameAs: [
-            'https://www.youtube.com/@abdirizakatosh8936',
-            'https://web.facebook.com/AbdirizakHajiAtosh',
-            'https://www.instagram.com/abdirizak_atosh/',
-            'https://www.linkedin.com/in/abdirizak-atosh-081ab1172',
-            'https://x.com/abdirizakatosh',
-            'https://www.tiktok.com/@abdirizakatosh',
+            'https://www.facebook.com/SalbaarMedialtd',
+            'https://www.instagram.com/salbaar_media/',
           ],
         }),
       },

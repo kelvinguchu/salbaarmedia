@@ -20,16 +20,31 @@ const contactMethods = [
     title: 'Phone',
     value: null,
     links: [
-      { label: '+252 61 6068554', href: 'tel:+252616068554' },
-      { label: '+252 61 9039111', href: 'tel:+252619039111' },
+      {
+        label: '+252 61 6068554',
+        href: 'tel:+252616068554',
+      },
+      {
+        label: '+252 61 9039111',
+        href: 'tel:+252619039111',
+      },
     ],
     description: 'Sat-Thu, 9am-6pm',
   },
   {
     icon: FaWhatsapp,
     title: 'WhatsApp',
-    value: '+252 61 9039111',
-    href: 'https://wa.me/252619039111',
+    value: null,
+    links: [
+      {
+        label: '+252 61 6068554',
+        href: 'https://wa.me/252616068554',
+      },
+      {
+        label: '+252 61 9039111',
+        href: 'https://wa.me/252619039111',
+      },
+    ],
     description: 'Quick responses',
   },
   {
@@ -45,7 +60,7 @@ export function ConnectSection() {
   return (
     <section
       id="connect"
-      className="relative py-12 md:py-20 overflow-hidden bg-zinc-50 dark:bg-transparent"
+      className="relative py-6 md:py-8 overflow-hidden bg-zinc-50 dark:bg-transparent"
     >
       {/* Backgrounds - Dark Mode Only */}
       <div className="absolute inset-0 bg-linear-to-br from-salbaar-700 via-salbaar-600 to-salbaar-800 opacity-0 dark:opacity-100 transition-opacity duration-300" />

@@ -3,51 +3,20 @@ import {
   HiOutlineGlobe,
   HiOutlineUserGroup,
 } from 'react-icons/hi'
-import {
-  RiFacebookLine,
-  RiInstagramLine,
-  RiLinkedinLine,
-  RiTiktokLine,
-  RiTwitterXLine,
-  RiYoutubeLine,
-} from 'react-icons/ri'
+import { RiFacebookLine, RiInstagramLine } from 'react-icons/ri'
 
 const socialPlatforms = [
   {
-    icon: RiYoutubeLine,
-    name: 'YouTube',
-    href: 'https://www.youtube.com/@abdirizakatosh8936',
-    hoverClass: 'hover:bg-red-600 hover:border-red-600',
-  },
-  {
     icon: RiFacebookLine,
     name: 'Facebook',
-    href: 'https://web.facebook.com/AbdirizakHajiAtosh',
+    href: 'https://www.facebook.com/SalbaarMedialtd',
     hoverClass: 'hover:bg-blue-600 hover:border-blue-600',
   },
   {
     icon: RiInstagramLine,
     name: 'Instagram',
-    href: 'https://www.instagram.com/abdirizak_atosh/',
+    href: 'https://www.instagram.com/salbaar_media/',
     hoverClass: 'hover:bg-pink-500 hover:border-pink-500',
-  },
-  {
-    icon: RiLinkedinLine,
-    name: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/abdirizak-atosh-081ab1172',
-    hoverClass: 'hover:bg-blue-700 hover:border-blue-700',
-  },
-  {
-    icon: RiTwitterXLine,
-    name: 'X',
-    href: 'https://x.com/abdirizakatosh',
-    hoverClass: 'hover:bg-zinc-600 hover:border-zinc-600',
-  },
-  {
-    icon: RiTiktokLine,
-    name: 'TikTok',
-    href: 'https://www.tiktok.com/@abdirizakatosh',
-    hoverClass: 'hover:bg-pink-600 hover:border-pink-600',
   },
 ]
 
@@ -61,7 +30,7 @@ export function StorySection() {
   return (
     <section
       id="story"
-      className="py-8 md:py-16 bg-background dark:bg-muted/50 overflow-hidden relative"
+      className="py-6 md:py-8 bg-background dark:bg-muted/50 overflow-hidden relative"
     >
       {/* Background accent */}
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-salbaar-600/30 to-transparent" />
@@ -69,19 +38,16 @@ export function StorySection() {
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-12 md:mb-16">
+        <div className="mb-4 md:mb-8">
           <div className="inline-flex items-center gap-3 mb-6">
             <span className="h-px w-8 md:w-12 bg-salbaar-500" />
             <span className="text-salbaar-500 font-semibold uppercase tracking-widest text-xs md:text-sm">
               Who We Are
             </span>
-            <span className="h-px w-8 md:w-12 bg-salbaar-500" />
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-tight">
-            The Creative Force
-            <br />
-            <span className="text-salbaar-500">Behind the Lens</span>
+            Our Story
           </h2>
         </div>
 
@@ -94,48 +60,84 @@ export function StorySection() {
               <div className="absolute -inset-px bg-linear-to-br from-salbaar-500 via-salbaar-600 to-salbaar-700 rounded-2xl md:rounded-3xl opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div className="relative h-full bg-card rounded-2xl md:rounded-3xl overflow-hidden flex flex-col">
-                {/* Founder Image */}
-                <div className="relative h-64 sm:h-80 md:h-96 overflow-hidden">
-                  <div className="absolute inset-0 group-hover:scale-105 transition-transform duration-700 ease-out">
-                    <img
-                      src="/founder.jpeg"
-                      alt="Abdirizak Atosh - Founder"
-                      className="w-full h-full object-cover object-top"
-                    />
-                    <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-1 p-1 bg-zinc-100 dark:bg-black/20 h-full min-h-[420px]">
+                  {/* Main Portrait - Left 2/3 */}
+                  <div className="md:col-span-2 relative h-64 md:h-full overflow-hidden rounded-xl md:rounded-l-2xl md:rounded-r-none group/main">
+                    <div className="absolute inset-0 group-hover/main:scale-105 transition-transform duration-700 ease-out">
+                      <img
+                        src="/founder.jpeg"
+                        alt="Abdirizak Atosh - Founder"
+                        className="w-full h-full object-cover object-top"
+                      />
+                      <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
+                    </div>
+
+                    {/* Founder Info Overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                      <p className="text-salbaar-400 text-xs uppercase tracking-widest mb-1">
+                        Founder & Chief Visionary
+                      </p>
+                      <h3 className="text-2xl md:text-3xl font-bold text-white">
+                        Abdirizak Atosh
+                      </h3>
+                    </div>
                   </div>
 
-                  {/* Founder Info Overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                    <p className="text-salbaar-400 text-xs uppercase tracking-widest mb-1">
-                      Founder & CEO
-                    </p>
-                    <h3 className="text-2xl md:text-3xl font-bold text-white">
-                      Abdirizak Atosh
-                    </h3>
+                  {/* Field Images - Right 1/3 Stacked */}
+                  <div className="md:col-span-1 flex flex-row md:flex-col gap-1 h-32 md:h-full">
+                    {/* Field Image 1 */}
+                    <div className="relative w-1/2 md:w-full h-full md:h-1/2 overflow-hidden rounded-xl md:rounded-tr-2xl md:rounded-tl-none md:rounded-b-none group/field1">
+                      <div className="absolute inset-0 group-hover/field1:scale-105 transition-transform duration-700 ease-out">
+                        <img
+                          src="/founder-in-field-1.jpeg"
+                          alt="Founder in the field"
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black/10 group-hover/field1:bg-transparent transition-colors duration-300" />
+                      </div>
+                    </div>
+
+                    {/* Field Image 2 */}
+                    <div className="relative w-1/2 md:w-full h-full md:h-1/2 overflow-hidden rounded-xl md:rounded-br-2xl md:rounded-bl-none md:rounded-t-none group/field2">
+                      <div className="absolute inset-0 group-hover/field2:scale-105 transition-transform duration-700 ease-out">
+                        <img
+                          src="/founder-in-field-2.jpeg"
+                          alt="Founder in action"
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black/10 group-hover/field2:bg-transparent transition-colors duration-300" />
+                      </div>
+                    </div>
                   </div>
                 </div>
 
                 {/* Content Below Image */}
                 <div className="p-6 md:p-8 flex-1 flex flex-col">
-                  {/* Quote */}
+                  {/* Bio Text */}
                   <div className="mb-6">
-                    <div className="text-4xl md:text-5xl text-salbaar-500 font-serif leading-none mb-3">
+                    <p className="text-sm md:text-base text-zinc-700 dark:text-zinc-400 leading-relaxed mb-4">
+                      A highly respected journalist and influential media
+                      professional, Atosh brings deep experience in connecting
+                      with Somali audiences. His work highlights the dynamic and
+                      culturally resonating role of digital journalism in
+                      Somalia's media landscape.
+                    </p>
+                    <div className="text-3xl md:text-4xl text-salbaar-500 font-serif leading-none mb-2">
                       &ldquo;
                     </div>
-                    <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-400 leading-relaxed italic">
-                      Every story deserves to be heard. At Salbaar Media, we
-                      don't just create content — we amplify voices that shape
-                      our world.
+                    <p className="text-base md:text-lg text-zinc-800 dark:text-zinc-300 leading-relaxed italic font-medium">
+                      Our visionary roots mirror the values of dynamic
+                      storytelling and public discourse.
                     </p>
                   </div>
 
                   {/* Social Platforms */}
                   <div className="pt-6 border-t border-border mt-auto">
                     <p className="text-zinc-600 dark:text-zinc-400 text-sm mb-4">
-                      Connect across platforms
+                      Connect with Salbaar Media
                     </p>
                     <div className="flex flex-wrap gap-2">
+                      {/* Filtering to show only active links: Facebook and Instagram */}
                       {socialPlatforms.map((platform) => (
                         <a
                           key={platform.name}
@@ -159,18 +161,36 @@ export function StorySection() {
           <div className="space-y-6 h-full flex flex-col">
             {/* Story Text */}
             <div className="bg-card backdrop-blur rounded-2xl p-6 md:p-8 border border-border hover:border-salbaar-500/30 transition-colors duration-300">
-              <p className="text-lg md:text-xl text-zinc-800 dark:text-zinc-200 leading-relaxed mb-4">
-                Salbaar Media was born from a simple belief:{' '}
-                <span className="text-foreground font-semibold">
-                  powerful storytelling changes everything
+              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
+                Journalistic Integrity meets Modern Storytelling
+              </h3>
+              <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-400 leading-relaxed mb-4">
+                Salbaar Media is a registered, Somalia-based company
+                specializing in comprehensive digital media production. We
+                deliver daily bulletins through{' '}
+                <span className="text-salbaar-500 font-medium">
+                  Daqiiqadaha Wararka
                 </span>
-                .
+                , in-depth articles, and timely news gathering across the Horn
+                of Africa.
               </p>
+
+              <div className="my-6 border-l-4 border-salbaar-500 pl-4">
+                <h4 className="text-lg font-semibold text-foreground mb-2">
+                  Why Salbaar?
+                </h4>
+                <p className="text-base text-zinc-600 dark:text-zinc-400 italic">
+                  "We don’t just report the news; we amplify voices. By blending
+                  traditional journalistic principles with innovative digital
+                  production, we set the standard for media excellence."
+                </p>
+              </div>
+
               <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-400 leading-relaxed">
-                Based in the heart of East Africa, we've quickly established
-                ourselves as a creative force in media production. From
-                compelling documentaries to dynamic live broadcasts, we bring
-                visions to life with passion and precision.
+                Our mission is brought to life by a seasoned team: producers
+                crafting polished narratives, voiceover artists delivering
+                excellence, and graphic designers creating visually impactful
+                entities.
               </p>
             </div>
 
