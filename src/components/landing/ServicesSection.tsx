@@ -15,53 +15,45 @@ const services = [
     description:
       'Daily digital bulletins with Daqiiqadaha Wararka new bulletins, in-depth articles, and real-time news updates.',
     icon: HiOutlineNewspaper,
-    number: '01',
   },
   {
     name: 'Film & Documentary',
     description:
       'Script-to-screen storytelling, human-interest features, and business documentaries.',
     icon: HiOutlineFilm,
-    number: '02',
   },
   {
     name: 'Digital Broadcasting',
     description:
       'Live event coverage, real-time digital broadcasting, and expert interviews.',
     icon: HiOutlineDesktopComputer,
-    number: '03',
   },
   {
     name: 'Commercial Production',
     description:
       'Brand videos, professional audio/video ads, and success story features.',
     icon: HiOutlineSpeakerphone,
-    number: '04',
   },
   {
     name: 'Creative Assets',
     description: 'Professional still photography and data-driven infographics.',
     icon: HiOutlinePhotograph,
-    number: '05',
   },
   {
     name: 'Media Consulting',
     description:
       'Media mapping, monitoring, strategic buying, and communication.',
     icon: HiOutlinePresentationChartBar,
-    number: '06',
   },
   {
     name: 'Film & Media Production',
     description: 'Script to Screen storytelling',
     icon: HiOutlineVideoCamera,
-    number: '07',
   },
   {
     name: 'Success Story Articles',
     description: 'Compelling narratives that highlight achievements',
     icon: HiOutlineNewspaper,
-    number: '08',
   },
 ]
 
@@ -115,11 +107,6 @@ export function ServicesSection() {
               transition={{ duration: 0.5, delay: index * 0.05 }}
               className="group relative overflow-hidden h-full bg-card border border-border rounded-2xl md:rounded-3xl p-6 hover:border-salbaar-500/30 hover:shadow-lg hover:shadow-salbaar-500/5 transition-[border-color,box-shadow] duration-300"
             >
-              {/* Creative Numbering */}
-              <div className="absolute bottom-2 right-4 text-5xl md:text-6xl font-bold text-zinc-100 dark:text-zinc-800/20 group-hover:text-salbaar-600/5 transition-colors duration-500 select-none pointer-events-none">
-                {service.number}
-              </div>
-
               <div className="relative z-10 flex flex-col h-full">
                 <div className="flex items-center gap-3 mb-3 md:mb-4">
                   <service.icon className="w-6 h-6 text-salbaar-600 dark:text-salbaar-500 shrink-0" />
