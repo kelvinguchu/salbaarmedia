@@ -113,7 +113,7 @@ export function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
-              className="group relative overflow-hidden h-full bg-card border border-border rounded-2xl md:rounded-3xl p-6 hover:border-salbaar-500/30 hover:shadow-lg hover:shadow-salbaar-500/5 transition-all duration-300"
+              className="group relative overflow-hidden h-full bg-card border border-border rounded-2xl md:rounded-3xl p-6 hover:border-salbaar-500/30 hover:shadow-lg hover:shadow-salbaar-500/5 transition-[border-color,box-shadow] duration-300"
             >
               {/* Creative Numbering */}
               <div className="absolute bottom-2 right-4 text-5xl md:text-6xl font-bold text-zinc-100 dark:text-zinc-800/20 group-hover:text-salbaar-600/5 transition-colors duration-500 select-none pointer-events-none">

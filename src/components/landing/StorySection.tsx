@@ -57,15 +57,6 @@ const socialPlatforms = {
       href: 'https://www.instagram.com/salbaar_media/',
       hoverClass: 'hover:bg-pink-500 hover:border-pink-500',
     },
-    {
-      icon: RiYoutubeLine,
-      name: 'YouTube',
-      href: 'https://www.youtube.com/channel/UC... (Company)', // Keeping previous placeholder or if I have company link? I'll keep the existing company block rendering as is, just replacing the personal block and the company block starts at line 29. I will target lines 15-48 to replace both or just personal.
-      // Wait, let's look at the target content.
-      // I will replace lines 15-48 to be safe and clean.
-      // Company youtube was '#' in line 45.
-      hoverClass: 'hover:bg-red-600 hover:border-red-600',
-    },
   ],
 }
 

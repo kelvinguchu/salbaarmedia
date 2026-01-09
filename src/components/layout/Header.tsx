@@ -32,9 +32,10 @@ export function Header() {
       setScrolled(window.scrollY > 10)
     }
 
+    handleScroll()
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [location])
 
   const navLinks = [
     { href: '/#story', label: 'Our Story' },
@@ -138,7 +139,7 @@ export function Header() {
                     </a>
                   ))}
                   <Button
-                    className="mt-6 h-14 bg-salbaar-600 hover:bg-salbaar-500 text-white text-lg font-medium"
+                    className="mt-6 mx-2 h-14 bg-salbaar-600 hover:bg-salbaar-500 text-white text-lg font-medium"
                     asChild
                   >
                     <a href="#connect" onClick={() => setSheetOpen(false)}>

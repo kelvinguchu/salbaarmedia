@@ -91,7 +91,8 @@ export function PartnersSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05, duration: 0.5 }}
-              className="w-full flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300 group"
+              whileHover={{ scale: 1.1 }}
+              className="w-full flex items-center justify-center p-4 group"
             >
               {partner.logo ? (
                 <img
