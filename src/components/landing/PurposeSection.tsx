@@ -65,12 +65,13 @@ export function PurposeSection() {
               {/* Accent line */}
               <div className="absolute top-0 left-0 w-1 h-full bg-linear-to-b from-salbaar-500 via-salbaar-600 to-transparent rounded-l-full" />
 
-              <div className="flex items-start gap-4 md:gap-6 mb-6">
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-salbaar-600/10 border border-salbaar-600/20 flex items-center justify-center shrink-0">
-                  <HiOutlineStar className="w-6 h-6 md:w-7 md:h-7 text-salbaar-500" />
-                </div>
+              {/* Decorative Icon */}
+              {/* Decorative Icon */}
+              <HiOutlineStar className="absolute top-6 right-6 w-24 h-24 md:w-32 md:h-32 text-salbaar-500/5 rotate-12 pointer-events-none select-none z-0" />
+
+              <div className="relative z-10 mb-6">
                 <div>
-                  <p className="text-salbaar-500 text-xs md:text-sm font-medium uppercase tracking-wider mb-1">
+                  <p className="text-salbaar-500 text-xs md:text-sm font-medium uppercase tracking-wider mb-2">
                     Our Mission
                   </p>
                   <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground">
@@ -79,7 +80,7 @@ export function PurposeSection() {
                 </div>
               </div>
 
-              <div className="space-y-4 pl-0 md:pl-20">
+              <div className="relative z-10 space-y-4">
                 <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-400 leading-relaxed">
                   To set the standard for media excellence by blending{' '}
                   <span className="text-foreground font-semibold">
@@ -112,13 +113,13 @@ export function PurposeSection() {
               {/* Pattern overlay */}
               <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_80%_20%,white,transparent_50%)]" />
 
-              <div className="relative">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white/10 backdrop-blur flex items-center justify-center shrink-0">
-                    <HiOutlineEye className="w-6 h-6 md:w-7 md:h-7 text-white" />
-                  </div>
+              {/* Decorative Icon */}
+              <HiOutlineEye className="absolute top-6 right-6 w-24 h-24 md:w-32 md:h-32 text-white/10 -rotate-12 pointer-events-none select-none z-0" />
+
+              <div className="relative z-10">
+                <div className="mb-6">
                   <div>
-                    <p className="text-salbaar-200 text-xs md:text-sm font-medium uppercase tracking-wider mb-1">
+                    <p className="text-salbaar-200 text-xs md:text-sm font-medium uppercase tracking-wider mb-2">
                       Our Vision
                     </p>
                     <h3 className="text-xl md:text-2xl font-bold text-white">
@@ -138,11 +139,11 @@ export function PurposeSection() {
                   Extending reach through live coverage, digital broadcasting,
                   and professional media services.
                 </p>
+              </div>
 
-                {/* Decorative */}
-                <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-6xl md:text-7xl font-bold text-white/10">
-                  02
-                </div>
+              {/* Decorative */}
+              <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-6xl md:text-7xl font-bold text-white/10">
+                02
               </div>
             </div>
           </motion.div>
