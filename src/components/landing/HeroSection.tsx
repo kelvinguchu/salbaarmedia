@@ -12,19 +12,18 @@ export function HeroSection() {
       typeof window !== 'undefined' &&
       window.matchMedia('(prefers-color-scheme: dark)').matches)
 
-
   const colors = isDark
     ? {
         background: '#0a0a0a',
-        primary: '237, 32, 36', 
-        secondary: '40, 40, 40', 
-        accent: '20, 20, 20', 
+        primary: '237, 32, 36',
+        secondary: '40, 40, 40',
+        accent: '20, 20, 20',
       }
     : {
         background: '#ffffff',
-        primary: '237, 32, 36', 
-        secondary: '200, 200, 200', 
-        accent: '230, 230, 230', 
+        primary: '237, 32, 36',
+        secondary: '200, 200, 200',
+        accent: '230, 230, 230',
       }
 
   return (
@@ -44,7 +43,7 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 sm:px-6 relative z-10 pt-24 pb-12 md:pt-32 md:pb-20">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 pt-20 pb-10 md:pt-28 md:pb-12">
         <div className="max-w-5xl mx-auto text-center">
           {/* Main Heading with staggered animation */}
           <motion.div
@@ -52,19 +51,13 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 relative">
-              <span className="text-foreground">Amplifying</span>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-4 relative leading-none">
+              <span className="text-foreground">Amplifying Voices.</span>
               <br />
               <span className="relative inline-block">
                 <span className="bg-linear-to-r from-salbaar-400 via-salbaar-500 to-salbaar-600 bg-clip-text text-transparent">
-                  Your Voice
+                  Shaping Narratives.
                 </span>
-                <motion.span
-                  className="absolute -bottom-2 left-0 right-0 h-1 bg-linear-to-r from-salbaar-500 to-salbaar-600 rounded-full"
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: 1 }}
-                  transition={{ delay: 0.8, duration: 0.6 }}
-                />
               </span>
             </h1>
           </motion.div>
@@ -73,7 +66,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-base sm:text-lg md:text-xl lg:text-2xl text-zinc-700 dark:text-zinc-400 mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed px-4"
+            className="text-base sm:text-lg md:text-xl lg:text-xl text-zinc-700 dark:text-zinc-400 mb-6 md:mb-10 max-w-3xl mx-auto leading-relaxed px-4"
           >
             We transform ideas into powerful visual stories. From documentaries
             to live broadcasts, we craft content that{' '}

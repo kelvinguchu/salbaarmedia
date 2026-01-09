@@ -22,6 +22,9 @@ export function PurposeSection() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(237,32,36,0.06),transparent_40%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(237,32,36,0.04),transparent_40%)]" />
 
+      {/* Top Divider */}
+      <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-salbaar-600/30 to-transparent" />
+
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Header */}
         <div className="mb-4 md:mb-8">
@@ -71,7 +74,7 @@ export function PurposeSection() {
                     Our Mission
                   </p>
                   <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground">
-                    Inform, Educate & Inspire
+                    Inform, Educate, Entertain & Inspire
                   </h3>
                 </div>
               </div>
@@ -86,8 +89,7 @@ export function PurposeSection() {
                 </p>
                 <p className="text-sm md:text-base text-zinc-600 dark:text-zinc-500 leading-relaxed">
                   We amplify voices and deliver compelling narratives through
-                  daily bulletins, in-depth reporting, and creative
-                  storytelling.
+                  creative storytelling, daily bulletins and in-depth reporting.
                 </p>
               </div>
 

@@ -1,27 +1,37 @@
 import * as motion from 'motion/react-client'
 
-// Comprehensive list of partners from public/partners directory
 const partners = [
-  {
-    name: 'Dahabshiil',
-    logo: '/partners/dahabshiil.svg',
-    className: 'invert dark:invert-0',
-  },
-  { name: 'Safaricom', logo: '/partners/safaricom.png' },
-  { name: 'Unicef', logo: '/partners/unicef.webp' },
+  { name: 'IOM', logo: '/partners/iom.png', className: 'invert dark:invert-0' },
   { name: 'USAID', logo: '/partners/usa-international-development.webp' },
-  { name: 'African Union', logo: '/partners/african-union.webp' },
+  { name: 'GIZ', logo: '/partners/giz-partner.svg', className: 'dark:invert' },
+  { name: 'UNICEF', logo: '/partners/unicef.webp' },
   { name: 'IGAD', logo: '/partners/igad.webp' },
+  { name: 'African Union', logo: '/partners/african-union.webp' },
+  { name: 'Mercy Corps', logo: '/partners/mercy-cops.webp' },
+  { name: 'AECOM', logo: '/partners/aecom.webp', className: 'dark:invert' },
+  { name: 'Particip', logo: '/partners/particip.png' },
   {
     name: 'WorldRemit',
     logo: '/partners/worldremit.avif',
     className: 'invert dark:invert-0',
   },
-  { name: 'Amal Express', logo: '/partners/amal-express.png' },
-  { name: 'Golis', logo: '/partners/golis.png' },
+  {
+    name: 'Dahabshiil',
+    logo: '/partners/dahabshiil.svg',
+    className: 'invert dark:invert-0',
+  },
   { name: 'Telesom', logo: '/partners/telesom.png' },
-  { name: 'Hodan Hospital', logo: '/partners/hodan-hospital.png' },
-  { name: 'Shaafi Hospital', logo: '/partners/shaafi-hospital.png' },
+  { name: 'Golis', logo: '/partners/golis.png' },
+  { name: 'Safaricom', logo: '/partners/safaricom.png' },
+  { name: 'Amal Express', logo: '/partners/amal-express.png' },
+  {
+    name: 'Freedom Airlines',
+    logo: '/partners/freedom-airlines.png',
+    className: 'invert dark:invert-0',
+  },
+
+  { name: 'EAJ', logo: '/partners/eaj.webp' },
+  { name: 'SIB', logo: '/partners/sib.svg', className: 'dark:invert' },
   {
     name: 'Mogadishu Specialist Hospital',
     logo: '/partners/mogadishu-specialist-hospital.png',
@@ -32,53 +42,43 @@ const partners = [
     logo: '/partners/horyaal-hospital.webp',
     className: 'invert dark:invert-0',
   },
-  { name: 'Mercy Corps', logo: '/partners/mercy-cops.webp' },
-  { name: 'GIZ', logo: '/partners/giz-partner.svg' },
-  {
-    name: 'AECOM',
-    logo: '/partners/aecom.webp',
-    className: 'dark:invert',
-  },
-  { name: 'EAJ', logo: '/partners/eaj.webp' },
-  { name: 'Federal Government of Somalia', logo: '/partners/somalia.webp' },
-  {
-    name: 'Daallo Airlines',
-    logo: '/partners/dallo-airlines.svg',
-    className: 'invert dark:invert-0',
-  },
-  { name: 'SIB', logo: '/partners/sib.svg' },
-  { name: 'EU Particip', logo: '/partners/particip.png' },
+  { name: 'Shaafi Hospital', logo: '/partners/shaafi-hospital.png' },
+  { name: 'Hodan Hospital', logo: '/partners/hodan-hospital.png' },
+  { name: 'Somalia', logo: '/partners/somalia.webp' },
 ]
 
 export function PartnersSection() {
   return (
     <section
       id="partners"
-      className="py-6 md:py-8 bg-background overflow-hidden"
+      className="py-12 md:py-16 bg-background relative overflow-hidden"
     >
-      <div className="container mx-auto px-4 sm:px-6">
+      {/* Top Divider */}
+      <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-salbaar-600/30 to-transparent" />
+
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#ed2024_1px,transparent_1px)] bg-size-[16px_16px]" />
+
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Header - Left aligned */}
-        <div className="mb-4 md:mb-8">
+        <div className="text-center max-w-4xl mx-auto mb-10 md:mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
             <div className="inline-flex items-center gap-3 mb-4">
-              <span className="h-px w-8 md:w-12 bg-salbaar-500" />
+              <span className="h-px w-8 bg-salbaar-500" />
               <span className="text-salbaar-500 font-semibold uppercase tracking-widest text-xs md:text-sm">
-                Trusted By
+                Trusted Partners
               </span>
+              <span className="h-px w-8 bg-salbaar-500" />
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3">
-              Our Partners
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              Partnering across the private, public, and humanitarian sectors to
+              deliver excellence and amplify your impact.
             </h2>
-
-            <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-400 max-w-4xl">
-              From finance to healthcare and telecommunications, we partner with
-              diverse sectors to deliver excellence and amplify impact.
-            </p>
           </motion.div>
         </div>
 

@@ -11,8 +11,8 @@ const contactMethods = [
   {
     icon: HiOutlineMail,
     title: 'Email',
-    value: 'hajiatosh@gmail.com',
-    href: 'mailto:hajiatosh@gmail.com',
+    value: 'connect@salbaar.com',
+    href: 'mailto:connect@salbaar.com',
     description: 'Response within 24h',
   },
   {
@@ -67,6 +67,9 @@ export function ConnectSection() {
       <div className="absolute inset-0 opacity-0 dark:opacity-5 bg-[radial-gradient(circle_at_30%_30%,white,transparent_50%)]" />
       <div className="absolute inset-0 opacity-0 dark:opacity-5 bg-[radial-gradient(circle_at_70%_70%,white,transparent_50%)]" />
 
+      {/* Top Divider */}
+      <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-salbaar-600/30 to-transparent" />
+
       {/* Light Mode - Subtle Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(237,32,36,0.03),transparent_50%)] dark:hidden" />
 
@@ -107,7 +110,7 @@ export function ConnectSection() {
                   asChild
                 >
                   <a
-                    href="mailto:hajiatosh@gmail.com"
+                    href="mailto:connect@salbaar.com"
                     className="inline-flex items-center gap-2"
                   >
                     <HiOutlineMail className="w-5 h-5" />

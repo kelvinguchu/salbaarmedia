@@ -1,4 +1,4 @@
-import { Link } from '@tanstack/react-router'
+import { Link, useLocation } from '@tanstack/react-router'
 import { useEffect, useState } from 'react'
 import {
   HiOutlineMenuAlt3,
@@ -20,6 +20,8 @@ export function Header() {
   const { theme, setTheme } = useTheme()
   const [sheetOpen, setSheetOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const location = useLocation()
+  const isHome = location.pathname === '/'
 
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark')
@@ -35,16 +37,17 @@ export function Header() {
   }, [])
 
   const navLinks = [
-    { href: '#story', label: 'Our Story' },
-    { href: '#services', label: 'Services' },
-    { href: '#partners', label: 'Partners' },
-    { href: '#connect', label: 'Connect' },
+    { href: '/#story', label: 'Our Story' },
+    { href: '/#services', label: 'Services' },
+    { href: '/gallery', label: 'Gallery' },
+    { href: '/#partners', label: 'Partners' },
+    { href: '/#connect', label: 'Connect' },
   ]
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
+        scrolled || !isHome
           ? 'bg-background/80 backdrop-blur-xl border-b border-border shadow-lg shadow-black/5 dark:shadow-salbaar-950/10'
           : 'bg-transparent'
       }`}
@@ -96,7 +99,7 @@ export function Header() {
               className="hidden sm:inline-flex bg-salbaar-600 hover:bg-salbaar-500 text-white font-medium shadow-lg shadow-salbaar-600/25 hover:shadow-salbaar-500/40 transition-all duration-300"
               asChild
             >
-              <a href="#connect">Start a Project</a>
+              <a href="/#connect">Start a Project</a>
             </Button>
 
             {/* Mobile Menu Sheet */}

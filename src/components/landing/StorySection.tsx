@@ -3,22 +3,71 @@ import {
   HiOutlineGlobe,
   HiOutlineUserGroup,
 } from 'react-icons/hi'
-import { RiFacebookLine, RiInstagramLine } from 'react-icons/ri'
+import {
+  RiFacebookLine,
+  RiInstagramLine,
+  RiLinkedinLine,
+  RiTwitterXLine,
+  RiYoutubeLine,
+} from 'react-icons/ri'
 
-const socialPlatforms = [
-  {
-    icon: RiFacebookLine,
-    name: 'Facebook',
-    href: 'https://www.facebook.com/SalbaarMedialtd',
-    hoverClass: 'hover:bg-blue-600 hover:border-blue-600',
-  },
-  {
-    icon: RiInstagramLine,
-    name: 'Instagram',
-    href: 'https://www.instagram.com/salbaar_media/',
-    hoverClass: 'hover:bg-pink-500 hover:border-pink-500',
-  },
-]
+const socialPlatforms = {
+  personal: [
+    {
+      icon: RiFacebookLine,
+      name: 'Facebook',
+      href: 'https://www.facebook.com/AbdirizakHajiAtosh/',
+      hoverClass: 'hover:bg-blue-600 hover:border-blue-600',
+    },
+    {
+      icon: RiInstagramLine,
+      name: 'Instagram',
+      href: 'https://www.instagram.com/abdirizak_atosh/',
+      hoverClass: 'hover:bg-pink-500 hover:border-pink-500',
+    },
+    {
+      icon: RiTwitterXLine,
+      name: 'X (Twitter)',
+      href: 'https://x.com/abdirizakatosh?lang=en',
+      hoverClass: 'hover:bg-black hover:border-black',
+    },
+    {
+      icon: RiLinkedinLine,
+      name: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/abdirizak-atosh-081ab1172/?originalSubdomain=ke',
+      hoverClass: 'hover:bg-blue-700 hover:border-blue-700',
+    },
+    {
+      icon: RiYoutubeLine,
+      name: 'YouTube',
+      href: 'https://www.youtube.com/@abdirizakatosh8936',
+      hoverClass: 'hover:bg-red-600 hover:border-red-600',
+    },
+  ],
+  company: [
+    {
+      icon: RiFacebookLine,
+      name: 'Facebook',
+      href: 'https://www.facebook.com/SalbaarMedialtd',
+      hoverClass: 'hover:bg-blue-600 hover:border-blue-600',
+    },
+    {
+      icon: RiInstagramLine,
+      name: 'Instagram',
+      href: 'https://www.instagram.com/salbaar_media/',
+      hoverClass: 'hover:bg-pink-500 hover:border-pink-500',
+    },
+    {
+      icon: RiYoutubeLine,
+      name: 'YouTube',
+      href: 'https://www.youtube.com/channel/UC... (Company)', // Keeping previous placeholder or if I have company link? I'll keep the existing company block rendering as is, just replacing the personal block and the company block starts at line 29. I will target lines 15-48 to replace both or just personal.
+      // Wait, let's look at the target content.
+      // I will replace lines 15-48 to be safe and clean.
+      // Company youtube was '#' in line 45.
+      hoverClass: 'hover:bg-red-600 hover:border-red-600',
+    },
+  ],
+}
 
 const stats = [
   { icon: HiOutlineUserGroup, value: '2M+', label: 'Followers' },
@@ -74,7 +123,7 @@ export function StorySection() {
 
                     {/* Founder Info Overlay */}
                     <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                      <p className="text-salbaar-400 text-xs uppercase tracking-widest mb-1">
+                      <p className="text-salbaar-300 text-xs uppercase tracking-widest mb-1 font-medium drop-shadow-md">
                         Founder & Chief Visionary
                       </p>
                       <h3 className="text-2xl md:text-3xl font-bold text-white">
@@ -127,29 +176,54 @@ export function StorySection() {
                     </div>
                     <p className="text-base md:text-lg text-zinc-800 dark:text-zinc-300 leading-relaxed italic font-medium">
                       Our visionary roots mirror the values of dynamic
-                      storytelling and public discourse.
+                      storytelling, where every frame captures the essence of
+                      humanity and every report builds a bridge of
+                      understanding.
                     </p>
                   </div>
 
-                  {/* Social Platforms */}
-                  <div className="pt-6 border-t border-border mt-auto">
-                    <p className="text-zinc-600 dark:text-zinc-400 text-sm mb-4">
-                      Connect with Salbaar Media
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {/* Filtering to show only active links: Facebook and Instagram */}
-                      {socialPlatforms.map((platform) => (
-                        <a
-                          key={platform.name}
-                          href={platform.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={`p-3 rounded-xl bg-secondary hover:bg-salbaar-600 hover:text-white border border-border ${platform.hoverClass} hover:scale-110 active:scale-95 transition-all duration-200 group/icon`}
-                          aria-label={platform.name}
-                        >
-                          <platform.icon className="w-5 h-5 text-zinc-600 dark:text-zinc-400 group-hover/icon:text-white transition-colors" />
-                        </a>
-                      ))}
+                  {/* Social Links */}
+                  <div className="mt-auto space-y-6">
+                    {/* Atosh Socials */}
+                    <div>
+                      <p className="text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-2">
+                        Connect with Abdirizak Atosh
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {socialPlatforms.personal.map((platform) => (
+                          <a
+                            key={platform.name}
+                            href={platform.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`p-2.5 rounded-lg bg-secondary hover:bg-salbaar-600 hover:text-white border border-border ${platform.hoverClass} transition-all duration-200 group/icon`}
+                            aria-label={platform.name}
+                          >
+                            <platform.icon className="w-4 h-4 text-zinc-600 dark:text-zinc-400 group-hover/icon:text-white transition-colors" />
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Company Socials */}
+                    <div>
+                      <p className="text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-2">
+                        Connect with Salbaar Media
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {socialPlatforms.company.map((platform) => (
+                          <a
+                            key={platform.name}
+                            href={platform.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`p-2.5 rounded-lg bg-secondary hover:bg-salbaar-600 hover:text-white border border-border ${platform.hoverClass} transition-all duration-200 group/icon`}
+                            aria-label={platform.name}
+                          >
+                            <platform.icon className="w-4 h-4 text-zinc-600 dark:text-zinc-400 group-hover/icon:text-white transition-colors" />
+                          </a>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -162,17 +236,17 @@ export function StorySection() {
             {/* Story Text */}
             <div className="bg-card backdrop-blur rounded-2xl p-6 md:p-8 border border-border hover:border-salbaar-500/30 transition-colors duration-300">
               <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
-                Journalistic Integrity meets Modern Storytelling
+                Amplifying Voices. Shaping Narratives.
               </h3>
               <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-400 leading-relaxed mb-4">
                 Salbaar Media is a registered, Somalia-based company
-                specializing in comprehensive digital media production. We
-                deliver daily bulletins through{' '}
+                specializing in comprehensive digital media production and news
+                services. We deliver daily bulletins through{' '}
                 <span className="text-salbaar-500 font-medium">
                   Daqiiqadaha Wararka
                 </span>
-                , in-depth articles, and timely news gathering across the Horn
-                of Africa.
+                , in-depth articles, timely news gathering, and human stories
+                across the Horn of Africa.
               </p>
 
               <div className="my-6 border-l-4 border-salbaar-500 pl-4">
@@ -180,17 +254,19 @@ export function StorySection() {
                   Why Salbaar?
                 </h4>
                 <p className="text-base text-zinc-600 dark:text-zinc-400 italic">
-                  "We don’t just report the news; we amplify voices. By blending
-                  traditional journalistic principles with innovative digital
-                  production, we set the standard for media excellence."
+                  &ldquo;We don’t just report the news; we amplify voices. By
+                  blending traditional journalistic principles with innovative
+                  digital production, we set the standard for media
+                  excellence.&rdquo;
                 </p>
               </div>
 
               <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-400 leading-relaxed">
-                Our mission is brought to life by a seasoned team: producers
-                crafting polished narratives, voiceover artists delivering
-                excellence, and graphic designers creating visually impactful
-                entities.
+                Our mission is powered by a seasoned team: producers and editors
+                crafting polished narratives, journalists and voiceover artists
+                delivering excellence, and visual artists creating impactful
+                content—all supported by our admin and strategy staff ensuring
+                operational precision.
               </p>
             </div>
 

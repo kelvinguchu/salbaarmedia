@@ -13,45 +13,55 @@ const services = [
   {
     name: 'News & Reporting',
     description:
-      'Daily bulletins with Daqiiqadaha Wararka, in-depth articles & real-time updates',
+      'Daily digital bulletins with Daqiiqadaha Wararka new bulletins, in-depth articles, and real-time news updates.',
     icon: HiOutlineNewspaper,
     number: '01',
   },
   {
     name: 'Film & Documentary',
-    description: 'Script-to-screen storytelling & business documentaries',
+    description:
+      'Script-to-screen storytelling, human-interest features, and business documentaries.',
     icon: HiOutlineFilm,
     number: '02',
   },
   {
     name: 'Digital Broadcasting',
-    description: 'Live coverage & real-time digital broadcasting',
+    description:
+      'Live event coverage, real-time digital broadcasting, and expert interviews.',
     icon: HiOutlineDesktopComputer,
     number: '03',
   },
   {
     name: 'Commercial Production',
-    description: 'Brand videos, audio/video ads & success stories',
+    description:
+      'Brand videos, professional audio/video ads, and success story features.',
     icon: HiOutlineSpeakerphone,
     number: '04',
   },
   {
     name: 'Creative Assets',
-    description: 'Professional photography & data-driven infographics',
+    description: 'Professional still photography and data-driven infographics.',
     icon: HiOutlinePhotograph,
     number: '05',
   },
   {
     name: 'Media Consulting',
-    description: 'Media mapping, monitoring & strategic buying',
+    description:
+      'Media mapping, monitoring, strategic buying, and communication.',
     icon: HiOutlinePresentationChartBar,
     number: '06',
   },
   {
-    name: 'Success Story Articles',
-    description: 'Compelling narratives that highlight achievement',
-    icon: HiOutlineVideoCamera, // Using VideoCamera as generic media/story icon or could import HiOutlineDocumentText
+    name: 'Film & Media Production',
+    description: 'Script to Screen storytelling',
+    icon: HiOutlineVideoCamera,
     number: '07',
+  },
+  {
+    name: 'Success Story Articles',
+    description: 'Compelling narratives that highlight achievements',
+    icon: HiOutlineNewspaper,
+    number: '08',
   },
 ]
 
@@ -63,6 +73,9 @@ export function ServicesSection() {
     >
       {/* Background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent,rgba(24,24,27,0.8))] dark:bg-[linear-gradient(to_bottom,transparent,rgba(24,24,27,0.8))] opacity-0 dark:opacity-100" />
+
+      {/* Top Divider */}
+      <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-salbaar-600/30 to-transparent" />
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Header */}
@@ -92,7 +105,7 @@ export function ServicesSection() {
         </div>
 
         {/* Services Grid - Unique numbered cards */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
           {services.map((service, index) => (
             <motion.div
               key={service.name}
@@ -100,24 +113,22 @@ export function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
-              className="group"
+              className="group relative overflow-hidden h-full bg-card border border-border rounded-2xl md:rounded-3xl p-6 hover:border-salbaar-500/30 hover:shadow-lg hover:shadow-salbaar-500/5 transition-all duration-300"
             >
-              <div className="relative h-full p-4 sm:p-5 md:p-6 rounded-xl md:rounded-2xl bg-card border border-border hover:border-salbaar-500/50 hover:bg-zinc-50 dark:hover:bg-zinc-800/60 transition-all duration-300 shadow-sm dark:shadow-none">
-                {/* Number */}
-                <span className="absolute top-3 right-3 md:top-4 md:right-4 text-xs font-mono text-zinc-400 dark:text-zinc-600 group-hover:text-salbaar-600 transition-colors">
-                  {service.number}
-                </span>
+              {/* Creative Numbering */}
+              <div className="absolute bottom-2 right-4 text-5xl md:text-6xl font-bold text-zinc-100 dark:text-zinc-800/20 group-hover:text-salbaar-600/5 transition-colors duration-500 select-none pointer-events-none">
+                {service.number}
+              </div>
 
-                {/* Icon */}
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-salbaar-600/10 border border-salbaar-600/20 flex items-center justify-center mb-4 group-hover:bg-salbaar-600 group-hover:border-salbaar-600 transition-all duration-300">
-                  <service.icon className="w-5 h-5 sm:w-6 sm:h-6 text-salbaar-500 group-hover:text-white transition-colors duration-300" />
+              <div className="relative z-10 flex flex-col h-full">
+                <div className="flex items-center gap-3 mb-3 md:mb-4">
+                  <service.icon className="w-6 h-6 text-salbaar-600 dark:text-salbaar-500 shrink-0" />
+                  <h3 className="text-base sm:text-lg font-bold text-foreground leading-snug group-hover:text-salbaar-600 transition-colors">
+                    {service.name}
+                  </h3>
                 </div>
 
-                {/* Content */}
-                <h3 className="text-sm sm:text-base md:text-lg font-bold text-foreground mb-1 md:mb-2">
-                  {service.name}
-                </h3>
-                <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed pr-8">
                   {service.description}
                 </p>
               </div>

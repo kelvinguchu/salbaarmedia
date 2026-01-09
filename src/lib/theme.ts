@@ -12,7 +12,7 @@ const storageKey = 'theme'
 
 export const getThemeServerFn = createServerFn().handler(async () => {
   await Promise.resolve()
-  return (getCookie(storageKey) || 'system') as T
+  return (getCookie(storageKey) || 'light') as T
 })
 
 export const setThemeServerFn = createServerFn({ method: 'POST' })

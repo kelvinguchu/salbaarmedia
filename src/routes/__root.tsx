@@ -12,6 +12,8 @@ import Lenis from 'lenis'
 import appCss from '../styles.css?url'
 import { ThemeProvider } from '@/components/theme-provider'
 import { getThemeServerFn } from '@/lib/theme'
+import { Header } from '@/components/layout/Header'
+import { Footer } from '@/components/layout/Footer'
 
 export const Route = createRootRoute({
   loader: async () => {
@@ -113,6 +115,21 @@ export const Route = createRootRoute({
     ],
   }),
 
+  notFoundComponent: () => (
+    <div className="flex flex-col items-center justify-center min-h-[60vh] p-8 text-center bg-background text-foreground">
+      <h1 className="text-6xl font-bold mb-4 text-salbaar-600">404</h1>
+      <p className="text-xl text-zinc-600 dark:text-zinc-400 mb-8">
+        Page not found
+      </p>
+      <a
+        href="/"
+        className="px-6 py-3 rounded-full bg-salbaar-600 text-white font-medium hover:bg-salbaar-700 transition-colors"
+      >
+        Return Home
+      </a>
+    </div>
+  ),
+
   component: RootDocument,
 })
 
@@ -170,8 +187,12 @@ function RootDocument() {
       </head>
       <body>
         <ThemeProvider theme={theme}>
-          <div id="root">
-            <Outlet />
+          <div id="root" className="bg-background min-h-screen flex flex-col">
+            <Header />
+            <main className="flex-1">
+              <Outlet />
+            </main>
+            <Footer />
           </div>
           <TanStackDevtools
             config={{

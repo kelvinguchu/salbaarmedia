@@ -1,6 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { Footer } from '@/components/layout/Footer'
-import { Header } from '@/components/layout/Header'
+
 import { HeroSection } from '@/components/landing/HeroSection'
 import { StorySection } from '@/components/landing/StorySection'
 import { PartnersSection } from '@/components/landing/PartnersSection'
@@ -47,7 +46,7 @@ export const Route = createFileRoute('/')({
               '@type': 'ContactPoint',
               telephone: '+252 61 6068554',
               contactType: 'customer service',
-              email: 'hajiatosh@gmail.com',
+              email: 'connect@salbaar.com',
             },
             {
               '@type': 'ContactPoint',
@@ -69,15 +68,13 @@ export const Route = createFileRoute('/')({
 
 function Index() {
   return (
-    <div className="bg-background min-h-screen">
-      <Header />
+    <>
       <HeroSection />
       <StorySection />
       <PurposeSection />
       <ServicesSection />
       <PartnersSection />
       <ConnectSection />
-      <Footer />
-    </div>
+    </>
   )
 }

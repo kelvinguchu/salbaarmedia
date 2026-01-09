@@ -96,11 +96,18 @@ export function Footer() {
             </h4>
             <div className="space-y-4">
               <a
-                href="mailto:hajiatosh@gmail.com"
+                href="mailto:connect@salbaar.com"
                 className="flex items-center gap-3 text-sm text-muted-foreground hover:text-salbaar-500 transition-colors group"
               >
                 <HiOutlineMail className="w-5 h-5" />
-                hajiatosh@gmail.com
+                connect@salbaar.com
+              </a>
+              <a
+                href="mailto:partnerships@salbaar.com"
+                className="flex items-center gap-3 text-sm text-muted-foreground hover:text-salbaar-500 transition-colors group"
+              >
+                <HiOutlineMail className="w-5 h-5" />
+                partnerships@salbaar.com
               </a>
               <div className="flex flex-col gap-2">
                 <a

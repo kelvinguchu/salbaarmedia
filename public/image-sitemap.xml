@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://salbaar.com/gallery</loc>
+    <image:image>
+      <image:loc>https://salbaar.com/work/atosh-addressing-a-conference.jpeg</image:loc>
+      <image:title>Atosh addressing a conference</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salbaar.com/work/atosh-addressing-another-conference.jpeg</image:loc>
+      <image:title>Speaking at conference</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salbaar.com/work/atosh-advertising-himself.jpeg</image:loc>
+      <image:title>Media feature</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salbaar.com/work/atosh-contact-us-graphic.jpeg</image:loc>
+      <image:title>Contact graphic</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salbaar.com/work/atosh-in-field-with-a-walkietalkie.jpeg</image:loc>
+      <image:title>Field reporting</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salbaar.com/work/atosh-in-studio.jpeg</image:loc>
+      <image:title>In studio</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salbaar.com/work/atosh-interviewing-a-local.jpeg</image:loc>
+      <image:title>Interviewing a local source</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salbaar.com/work/atosh-interviewing-a-millitant.jpeg</image:loc>
+      <image:title>Exclusive interview</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salbaar.com/work/atosh-interviewing-an-official.jpeg</image:loc>
+      <image:title>Interviewing an official</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salbaar.com/work/atosh-with-fellow-journalist.jpeg</image:loc>
+      <image:title>Collaboration</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salbaar.com/work/in-the-studio-headquarters.jpeg</image:loc>
+      <image:title>Studio headquarters</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salbaar.com/work/taking-a-walk.jpeg</image:loc>
+      <image:title>On the move</image:title>
+    </image:image>
+  </url>
+</urlset>
